@@ -21,4 +21,4 @@ async def on_member_join(member):
     await bot.add_roles(member, role)
     print ("Added role Member to user: " + str(member))
 
-bot.run("")
+bot.run("TOKEN")
