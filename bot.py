@@ -21,4 +21,12 @@ async def on_member_join(member):
     await bot.add_roles(member, role)
     print ("Added role Member to user: " + str(member))
 
+@bot.command
+async def warn(ctx, user, msg):
+    await ctx.delete_message(ctx.message)
+    await ctx.send("%s, %s" % user % msg)
+
+
+
+bot.add_command(warn)
 bot.run("TOKEN")
